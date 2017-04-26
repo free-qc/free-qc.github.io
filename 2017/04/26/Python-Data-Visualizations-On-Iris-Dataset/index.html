@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Seaborn,Matplotlib," />
 
 
 
@@ -90,15 +90,32 @@
 
 
 
-<meta name="description" content="Learning to walk again.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Free_QC">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Import Data123456789101112131415# First, we&apos;ll import pandas, a data processing and CSV file I/O libraryimport pandas as pd# We&apos;ll also import seaborn, a Python graphing libraryimport warnings # curre">
+<meta name="keywords" content="Seaborn,Matplotlib">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Data Visualizations On Iris Dataset">
+<meta property="og:url" content="http://yoursite.com/2017/04/26/Python-Data-Visualizations-On-Iris-Dataset/index.html">
 <meta property="og:site_name" content="Free_QC">
-<meta property="og:description" content="Learning to walk again.">
+<meta property="og:description" content="Import Data123456789101112131415# First, we&apos;ll import pandas, a data processing and CSV file I/O libraryimport pandas as pd# We&apos;ll also import seaborn, a Python graphing libraryimport warnings # curre">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/0375079192FC4828A48D551328723908/787">
+<meta property="og:image" content="https://www.kaggle.io/svf/307534/c84713220f6e85f14c2a8488c36d38f5/__results___files/__results___3_1.png">
+<meta property="og:image" content="https://www.kaggle.io/svf/307534/c84713220f6e85f14c2a8488c36d38f5/__results___files/__results___4_1.png">
+<meta property="og:image" content="https://www.kaggle.io/svf/307534/c84713220f6e85f14c2a8488c36d38f5/__results___files/__results___5_1.png">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/CFEA44695BDC4461AB0455AA11B428AC/817">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/D5C0C581B47047798A0DEA0228CEC3C5/826">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/04BD5375B8234D54AC1956D990B8443E/831">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/D2BA3868B0E54AA5BC01CC1ED395A004/836">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/A4E737D215E845D390240CA0BC756858/843">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/4F4099E236B04AA0B9C9593C2068D8B7/847">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/9C63D2705182490F8B343545321F9A6F/863">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/F1C497AA05D04521B2688F1A4CF833BD/862">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/5AF4423AB62941F081E2D2979C2F8AA7/865">
+<meta property="og:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/BD3D8BA8AA91426AA3E2ED8A3650AA49/864">
+<meta property="og:updated_time" content="2017-04-26T07:44:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Free_QC">
-<meta name="twitter:description" content="Learning to walk again.">
+<meta name="twitter:title" content="Python Data Visualizations On Iris Dataset">
+<meta name="twitter:description" content="Import Data123456789101112131415# First, we&apos;ll import pandas, a data processing and CSV file I/O libraryimport pandas as pd# We&apos;ll also import seaborn, a Python graphing libraryimport warnings # curre">
+<meta name="twitter:image" content="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/0375079192FC4828A48D551328723908/787">
 
 
 
@@ -126,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/26/Python-Data-Visualizations-On-Iris-Dataset/"/>
 
 
 
 
 
-  <title>Free_QC</title>
+  <title>Python Data Visualizations On Iris Dataset | Free_QC</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -157,9 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,9 +267,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -284,10 +299,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/26/Python-Data-Visualizations-On-Iris-Dataset/" itemprop="url">
-                  Python Data Visualizations On Iris Dataset
-                </a>
+                Python Data Visualizations On Iris Dataset
               
             
           </h1>
@@ -359,9 +371,7 @@
       
 
       
-        
-          
-            <h2 id="Import-Data"><a href="#Import-Data" class="headerlink" title="Import Data"></a>Import Data</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># First, we'll import pandas, a data processing and CSV file I/O library</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line"><span class="comment"># We'll also import seaborn, a Python graphing library</span></div><div class="line"><span class="keyword">import</span> warnings <span class="comment"># current version of seaborn generates a bunch of warnings that we'll ignore</span></div><div class="line">warnings.filterwarnings(<span class="string">"ignore"</span>)</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line">sns.set(style=<span class="string">"white"</span>, color_codes=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># Next, we'll load the Iris flower dataset</span></div><div class="line">iris = pd.read_csv(<span class="string">"../input/Iris.csv"</span>) <span class="comment"># the iris dataset is now a Pandas DataFrame</span></div><div class="line"></div><div class="line"><span class="comment"># Let's see what's in the iris data</span></div><div class="line">iris.head()</div></pre></td></tr></table></figure>
+        <h2 id="Import-Data"><a href="#Import-Data" class="headerlink" title="Import Data"></a>Import Data</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># First, we'll import pandas, a data processing and CSV file I/O library</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line"><span class="comment"># We'll also import seaborn, a Python graphing library</span></div><div class="line"><span class="keyword">import</span> warnings <span class="comment"># current version of seaborn generates a bunch of warnings that we'll ignore</span></div><div class="line">warnings.filterwarnings(<span class="string">"ignore"</span>)</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line">sns.set(style=<span class="string">"white"</span>, color_codes=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># Next, we'll load the Iris flower dataset</span></div><div class="line">iris = pd.read_csv(<span class="string">"../input/Iris.csv"</span>) <span class="comment"># the iris dataset is now a Pandas DataFrame</span></div><div class="line"></div><div class="line"><span class="comment"># Let's see what's in the iris data</span></div><div class="line">iris.head()</div></pre></td></tr></table></figure>
 <p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/0375079192FC4828A48D551328723908/787" alt="image"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Let's see how many examples we have of each species</span></div><div class="line">iris[<span class="string">"Species"</span>].value_counts()</div></pre></td></tr></table></figure>
 <table>
@@ -421,42 +431,58 @@
 <p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/5AF4423AB62941F081E2D2979C2F8AA7/865" alt="image"></p>
 <h2 id="radviz"><a href="#radviz" class="headerlink" title="radviz"></a>radviz</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># A final multivariate visualization technique pandas has is radviz</span></div><div class="line"><span class="comment"># Which puts each feature as a point on a 2D plane, and then simulates</span></div><div class="line"><span class="comment"># having each sample attached to those points through a spring weighted</span></div><div class="line"><span class="comment"># by the relative value for that feature</span></div><div class="line"><span class="keyword">from</span> pandas.tools.plotting <span class="keyword">import</span> radviz</div><div class="line">radviz(iris.drop(<span class="string">"Id"</span>, axis=<span class="number">1</span>), <span class="string">"Species"</span>)</div></pre></td></tr></table></figure>
 <h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/BD3D8BA8AA91426AA3E2ED8A3650AA49/864" alt="image"></h2>
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Seaborn/" rel="tag"># Seaborn</a>
+          
+            <a href="/tags/Matplotlib/" rel="tag"># Matplotlib</a>
+          
+        </div>
+      
+
+      
+        
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -464,6 +490,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -483,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -557,6 +596,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Import-Data"><span class="nav-number">1.</span> <span class="nav-text">Import Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas-plot"><span class="nav-number">2.</span> <span class="nav-text">pandas.plot( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seaborn-joinplot"><span class="nav-number">3.</span> <span class="nav-text">seaborn.joinplot( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seaborn-scatter"><span class="nav-number">4.</span> <span class="nav-text">seaborn.scatter( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seaborn-boxplot"><span class="nav-number">5.</span> <span class="nav-text">seaborn.boxplot( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seaborn-stripplot"><span class="nav-number">6.</span> <span class="nav-text">seaborn.stripplot( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seaborn-violinplot"><span class="nav-number">7.</span> <span class="nav-text">seaborn.violinplot( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seaborn-kdeplot"><span class="nav-number">8.</span> <span class="nav-text">seaborn.kdeplot( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#seaborn-pairplot"><span class="nav-number">9.</span> <span class="nav-text">seaborn.pairplot( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandas-boxplot"><span class="nav-number">10.</span> <span class="nav-text">pandas.boxplot( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#andrews-curves"><span class="nav-number">11.</span> <span class="nav-text">andrews_curves</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#parallel-coordinates"><span class="nav-number">12.</span> <span class="nav-text">parallel_coordinates</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#radviz"><span class="nav-number">13.</span> <span class="nav-text">radviz</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">14.</span> <span class="nav-text"></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -677,6 +732,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
