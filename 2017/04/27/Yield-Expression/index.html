@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python," />
 
 
 
@@ -90,15 +90,17 @@
 
 
 
-<meta name="description" content="Learning to walk again.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Free_QC">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Documentation The yield expression is used when defining a generator function or an asynchronous generator function and thus can only be used in the body of a function definition. Using a yield expre">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yield Expression">
+<meta property="og:url" content="http://yoursite.com/2017/04/27/Yield-Expression/index.html">
 <meta property="og:site_name" content="Free_QC">
-<meta property="og:description" content="Learning to walk again.">
+<meta property="og:description" content="Documentation The yield expression is used when defining a generator function or an asynchronous generator function and thus can only be used in the body of a function definition. Using a yield expre">
+<meta property="og:updated_time" content="2017-04-27T09:14:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Free_QC">
-<meta name="twitter:description" content="Learning to walk again.">
+<meta name="twitter:title" content="Yield Expression">
+<meta name="twitter:description" content="Documentation The yield expression is used when defining a generator function or an asynchronous generator function and thus can only be used in the body of a function definition. Using a yield expre">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/27/Yield-Expression/"/>
 
 
 
 
 
-  <title>Free_QC</title>
+  <title>Yield Expression | Free_QC</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -157,9 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -284,10 +284,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/27/Yield-Expression/" itemprop="url">
-                  Yield Expression
-                </a>
+                Yield Expression
               
             
           </h1>
@@ -359,9 +356,7 @@
       
 
       
-        
-          
-            <hr>
+        <hr>
 <h2 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h2><blockquote>
 <p>The yield expression is used when defining a <strong>generator function</strong> or an <strong>asynchronous generator</strong> function and thus can only be used in the body of a function definition. Using a yield expression in a function’s body causes that function to be a generator, and using it in an async def function’s body causes that coroutine function to be an asynchronous generator.</p>
 <p>When a generator function is called, it returns an iterator known as a generator. That generator then controls the execution of the generator function. The execution starts when one of the generator’s methods is called. At that time, the execution proceeds to the first yield expression, where it is suspended again, returning the value of expression_list to the generator’s caller. By suspended, we mean that all local state is retained, including the current bindings of local variables, the instruction pointer, the internal evaluation stack, and the state of any exception handling. When the execution is resumed by calling one of the generator’s methods, the function can proceed exactly as if the yield expression were just another external call. The value of the yield expression after resuming depends on the method which resumed the execution. If __next__( ) is used (typically via either a for or the next( ) builtin) then the result is None. Otherwise, if send( ) is used, then the result will be the value passed in to that method.</p>
@@ -387,242 +382,72 @@
 <p>当我们使用next()或for循环调用我们创建的生成器对象时，第一次调用会将函数的代码从头到yield部分全部执行，然后返回生成的值，接下来继续调用时，只会执行函数中的循环部分来返回下一个值，直到返回全部值。可以做一个简单的测试：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">creat_generator</span><span class="params">()</span>:</span></div><div class="line"><span class="meta">... </span>    print(<span class="string">'generator'</span>)</div><div class="line"><span class="meta">... </span>    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>):</div><div class="line"><span class="meta">... </span>            <span class="keyword">yield</span> i*i</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>my_generator = creat_generator()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> my_generator:</div><div class="line"><span class="meta">... </span>    print(i)</div><div class="line">...</div><div class="line">generator <span class="comment">#只打印出来一次</span></div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">4</span></div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/Python-Data-Visualizations-On-Iris-Dataset/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="QC">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Free_QC">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/26/Python-Data-Visualizations-On-Iris-Dataset/" itemprop="url">
-                  Python Data Visualizations On Iris Dataset
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-26T15:30:53+08:00">
-                2017-04-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Data-Science/" itemprop="url" rel="index">
-                    <span itemprop="name">Data Science</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/python/" rel="tag"># python</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-            <h2 id="Import-Data"><a href="#Import-Data" class="headerlink" title="Import Data"></a>Import Data</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># First, we'll import pandas, a data processing and CSV file I/O library</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"></div><div class="line"><span class="comment"># We'll also import seaborn, a Python graphing library</span></div><div class="line"><span class="keyword">import</span> warnings <span class="comment"># current version of seaborn generates a bunch of warnings that we'll ignore</span></div><div class="line">warnings.filterwarnings(<span class="string">"ignore"</span>)</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line">sns.set(style=<span class="string">"white"</span>, color_codes=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># Next, we'll load the Iris flower dataset</span></div><div class="line">iris = pd.read_csv(<span class="string">"../input/Iris.csv"</span>) <span class="comment"># the iris dataset is now a Pandas DataFrame</span></div><div class="line"></div><div class="line"><span class="comment"># Let's see what's in the iris data</span></div><div class="line">iris.head()</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/0375079192FC4828A48D551328723908/787" alt="image"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Let's see how many examples we have of each species</span></div><div class="line">iris[<span class="string">"Species"</span>].value_counts()</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>species</th>
-<th>counts</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Iris-virginica</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Iris-versicolor</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Iris-setosa</td>
-<td>50</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="pandas-plot"><a href="#pandas-plot" class="headerlink" title="pandas.plot( )"></a>pandas.plot( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The first way we can plot things is using the .plot extension from Pandas dataframes</span></div><div class="line"><span class="comment"># We'll use this to make a scatterplot of the Iris features.</span></div><div class="line">iris.plot(kind=<span class="string">"scatter"</span>, x=<span class="string">"SepalLengthCm"</span>, y=<span class="string">"SepalWidthCm"</span>)</div></pre></td></tr></table></figure>
-<p><img src="https://www.kaggle.io/svf/307534/c84713220f6e85f14c2a8488c36d38f5/__results___files/__results___3_1.png" alt="image"></p>
-<hr>
-<h2 id="seaborn-joinplot"><a href="#seaborn-joinplot" class="headerlink" title="seaborn.joinplot( )"></a>seaborn.joinplot( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># We can also use the seaborn library to make a similar plot</span></div><div class="line"><span class="comment"># A seaborn jointplot shows bivariate scatterplots and univariate histograms in the same figure</span></div><div class="line">sns.jointplot(x=<span class="string">"SepalLengthCm"</span>, y=<span class="string">"SepalWidthCm"</span>, data=iris, size=<span class="number">5</span>)</div></pre></td></tr></table></figure>
-<p><img src="https://www.kaggle.io/svf/307534/c84713220f6e85f14c2a8488c36d38f5/__results___files/__results___4_1.png" alt="image"></p>
-<hr>
-<h2 id="seaborn-scatter"><a href="#seaborn-scatter" class="headerlink" title="seaborn.scatter( )"></a>seaborn.scatter( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># One piece of information missing in the plots above is what species each plant is</span></div><div class="line"><span class="comment"># We'll use seaborn's FacetGrid to color the scatterplot by species</span></div><div class="line">sns.FacetGrid(iris, hue=<span class="string">"Species"</span>, size=<span class="number">5</span>) \</div><div class="line">   .map(plt.scatter, <span class="string">"SepalLengthCm"</span>, <span class="string">"SepalWidthCm"</span>) \</div><div class="line">   .add_legend()</div></pre></td></tr></table></figure>
-<p><img src="https://www.kaggle.io/svf/307534/c84713220f6e85f14c2a8488c36d38f5/__results___files/__results___5_1.png" alt="image"></p>
-<hr>
-<h2 id="seaborn-boxplot"><a href="#seaborn-boxplot" class="headerlink" title="seaborn.boxplot( )"></a>seaborn.boxplot( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># We can look at an individual feature in Seaborn through a boxplot</span></div><div class="line">sns.boxplot(x=<span class="string">"Species"</span>, y=<span class="string">"PetalLengthCm"</span>, data=iris)</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/CFEA44695BDC4461AB0455AA11B428AC/817" alt="image"></p>
-<hr>
-<h2 id="seaborn-stripplot"><a href="#seaborn-stripplot" class="headerlink" title="seaborn.stripplot( )"></a>seaborn.stripplot( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># One way we can extend this plot is adding a layer of individual points on top of</span></div><div class="line"><span class="comment"># it through Seaborn's striplot</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># We'll use jitter=True so that all the points don't fall in single vertical lines</span></div><div class="line"><span class="comment"># above the species</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Saving the resulting axes as ax each time causes the resulting plot to be shown</span></div><div class="line"><span class="comment"># on top of the previous axes</span></div><div class="line">ax = sns.boxplot(x=<span class="string">"Species"</span>, y=<span class="string">"PetalLengthCm"</span>, data=iris)</div><div class="line">ax = sns.stripplot(x=<span class="string">"Species"</span>, y=<span class="string">"PetalLengthCm"</span>, data=iris, jitter=<span class="keyword">True</span>, edgecolor=<span class="string">"gray"</span>)</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/D5C0C581B47047798A0DEA0228CEC3C5/826" alt="image"></p>
-<hr>
-<h2 id="seaborn-violinplot"><a href="#seaborn-violinplot" class="headerlink" title="seaborn.violinplot( )"></a>seaborn.violinplot( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># A violin plot combines the benefits of the previous two plots and simplifies them</span></div><div class="line"><span class="comment"># Denser regions of the data are fatter, and sparser thiner in a violin plot</span></div><div class="line">sns.violinplot(x=<span class="string">"Species"</span>, y=<span class="string">"PetalLengthCm"</span>, data=iris, size=<span class="number">6</span>)</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/04BD5375B8234D54AC1956D990B8443E/831" alt="image"></p>
-<hr>
-<h2 id="seaborn-kdeplot"><a href="#seaborn-kdeplot" class="headerlink" title="seaborn.kdeplot( )"></a>seaborn.kdeplot( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># A final seaborn plot useful for looking at univariate relations is the kdeplot,</span></div><div class="line"><span class="comment"># which creates and visualizes a kernel density estimate of the underlying feature</span></div><div class="line"><span class="comment">#kernel density estimat:核密度估计</span></div><div class="line">sns.FacetGrid(iris, hue=<span class="string">"Species"</span>, size=<span class="number">6</span>) \</div><div class="line">   .map(sns.kdeplot, <span class="string">"PetalLengthCm"</span>) \</div><div class="line">   .add_legend()</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/D2BA3868B0E54AA5BC01CC1ED395A004/836" alt="image"></p>
-<hr>
-<h2 id="seaborn-pairplot"><a href="#seaborn-pairplot" class="headerlink" title="seaborn.pairplot( )"></a>seaborn.pairplot( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Another useful seaborn plot is the pairplot, which shows the bivariate relation</span></div><div class="line"><span class="comment"># between each pair of features</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># From the pairplot, we'll see that the Iris-setosa species is separataed from the other</span></div><div class="line"><span class="comment"># two across all feature combinations</span></div><div class="line">sns.pairplot(iris.drop(<span class="string">"Id"</span>, axis=<span class="number">1</span>), hue=<span class="string">"Species"</span>, size=<span class="number">3</span>)</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/A4E737D215E845D390240CA0BC756858/843" alt="image"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The diagonal elements in a pairplot show the histogram by default</span></div><div class="line"><span class="comment"># We can update these elements to show other things, such as a kde</span></div><div class="line">sns.pairplot(iris.drop(<span class="string">"Id"</span>, axis=<span class="number">1</span>), hue=<span class="string">"Species"</span>, size=<span class="number">3</span>, diag_kind=<span class="string">"kde"</span>)</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/4F4099E236B04AA0B9C9593C2068D8B7/847" alt="image"></p>
-<hr>
-<h2 id="pandas-boxplot"><a href="#pandas-boxplot" class="headerlink" title="pandas.boxplot( )"></a>pandas.boxplot( )</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Now that we've covered seaborn, let's go back to some of the ones we can make with Pandas</span></div><div class="line"><span class="comment"># We can quickly make a boxplot with Pandas on each feature split out by species</span></div><div class="line">iris.drop(<span class="string">"Id"</span>, axis=<span class="number">1</span>).boxplot(by=<span class="string">"Species"</span>, figsize=(<span class="number">12</span>, <span class="number">6</span>))</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/9C63D2705182490F8B343545321F9A6F/863" alt="image"></p>
-<h2 id="andrews-curves"><a href="#andrews-curves" class="headerlink" title="andrews_curves"></a>andrews_curves</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># One cool more sophisticated technique pandas has available is called Andrews Curves</span></div><div class="line"><span class="comment"># Andrews Curves involve using attributes of samples as coefficients for Fourier series</span></div><div class="line"><span class="comment"># and then plotting these</span></div><div class="line"><span class="comment">#In data visualization, an Andrews plot or Andrews curve is a way to visualize structure in high-dimensional data.</span></div><div class="line"><span class="comment">#It is basically a rolled-down, non-integer version of the Kent–Kiviat radar chart, or a smoothened version of a parallel coordinate plot.</span></div><div class="line"><span class="keyword">from</span> pandas.tools.plotting <span class="keyword">import</span> andrews_curves</div><div class="line">andrews_curves(iris.drop(<span class="string">"Id"</span>, axis=<span class="number">1</span>), <span class="string">"Species"</span>)</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/F1C497AA05D04521B2688F1A4CF833BD/862" alt="image"></p>
-<h2 id="parallel-coordinates"><a href="#parallel-coordinates" class="headerlink" title="parallel_coordinates"></a>parallel_coordinates</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Another multivariate visualization technique pandas has is parallel_coordinates</span></div><div class="line"><span class="comment"># Parallel coordinates plots each feature on a separate column &amp; then draws lines</span></div><div class="line"><span class="comment"># connecting the features for each data sample</span></div><div class="line"><span class="keyword">from</span> pandas.tools.plotting <span class="keyword">import</span> parallel_coordinates</div><div class="line">parallel_coordinates(iris.drop(<span class="string">"Id"</span>, axis=<span class="number">1</span>), <span class="string">"Species"</span>)</div></pre></td></tr></table></figure>
-<p><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/5AF4423AB62941F081E2D2979C2F8AA7/865" alt="image"></p>
-<h2 id="radviz"><a href="#radviz" class="headerlink" title="radviz"></a>radviz</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># A final multivariate visualization technique pandas has is radviz</span></div><div class="line"><span class="comment"># Which puts each feature as a point on a 2D plane, and then simulates</span></div><div class="line"><span class="comment"># having each sample attached to those points through a spring weighted</span></div><div class="line"><span class="comment"># by the relative value for that feature</span></div><div class="line"><span class="keyword">from</span> pandas.tools.plotting <span class="keyword">import</span> radviz</div><div class="line">radviz(iris.drop(<span class="string">"Id"</span>, axis=<span class="number">1</span>), <span class="string">"Species"</span>)</div></pre></td></tr></table></figure>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://note.youdao.com/yws/public/resource/163f8fbcd09fd814336aaa776add7e51/xmlnote/BD3D8BA8AA91426AA3E2ED8A3650AA49/864" alt="image"></h2>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/26/Python-Data-Visualizations-On-Iris-Dataset/" rel="prev" title="Python Data Visualizations On Iris Dataset">
+                Python Data Visualizations On Iris Dataset <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -630,6 +455,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -649,8 +478,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -723,6 +561,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Documentation"><span class="nav-number">1.</span> <span class="nav-text">Documentation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iterator"><span class="nav-number">2.</span> <span class="nav-text">iterator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iterable"><span class="nav-number">3.</span> <span class="nav-text">iterable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generator"><span class="nav-number">4.</span> <span class="nav-text">generator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#yield"><span class="nav-number">5.</span> <span class="nav-text">yield</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -843,6 +697,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
